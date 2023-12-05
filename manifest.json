@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "eJP ext",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup.html"
+    },
+
+    "description": "eJP extensions",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://mts-nathumbehav.nature.com/*",
+                "*://reviewerfinder.nature.com/*"
+            ],
+            "js": [
+                "jquery.js",
+                "jquery.dataTables.js",
+                "content.js"
+            ],
+            "css": [
+                "custom.css",
+                "dataTables.css"
+            ],
+            "web_accessible_resources": [
+                "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap",
+                "https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap",
+                "https://fonts.googleapis.com/css?family=Lora&display=swap"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "background": {
+        "service_worker":  "background.js"
+    }
+}

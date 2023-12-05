@@ -1,0 +1,341 @@
+* {
+    font-family: "Roboto", sans-serif !important;
+    /* FONT-SIZE: 16px; */
+}
+
+.pending * {
+    background-color : #fc8b83;
+}
+
+
+.tabItem *,
+.stickynote * {
+    font-family: "Roboto", sans-serif !important;
+    font-size: 13px !important;
+}
+
+
+
+input[type="submit"],
+input[type="SUBMIT"],
+input[type="button"],
+input.Triage
+ {
+    padding: 7px 7px; /* Adjust padding to increase button size */
+    margin: 10px;
+    border: none;
+    border-radius: 5px; /* Apply border radius for rounded corners */
+    background-color: #7180ad; /* Set background color */
+    color: #fff; /* Set text color */
+    /* Add any additional styles or modifications */
+}
+
+input[type="submit"]:hover,
+input[type="SUBMIT"]:hover,
+input[type="button"]:hover,
+input.Triage:hover
+{
+    background-color: #a7b2d6; /* Set lighter background color on hover */
+}
+
+button:hover{
+    background-color: #a7b2d6 !important;
+}
+
+/* Apply general table styles */
+.page table,
+#ms_brief_table,
+form table {
+    border-collapse: collapse; /* Merge table cell borders */
+}
+
+/* Apply styles to table headers */
+.page th,
+.folder_table th,
+form table tr th,
+table th {
+    background-color: #63b1c7; /* Set background color */
+    color: #fff; /* Set text color */
+    padding: 3px; /* Adjust padding */
+}
+
+/* Apply styles to table cells */
+.page td {
+    padding: 3px; /* Adjust padding */
+}
+
+td.folder_row_header {
+    background-color: #63b1c7;
+}
+
+/* Apply zebra-striping to alternate rows */
+.tabPage tr:nth-child(even),
+.folder_table tr:nth-child(even) {
+    background-color: #f5f5f5; /* Set background color for even rows */
+}
+
+/* Add borders to table and cells */
+
+tr.tabPage td.page tr:not(.dataTable tr),
+tr.tabPage td.page td:not(.dataTable td),
+tr.tabPage td.page table {
+    border: 0px solid #f0f0f0; /* Set border color and width */
+    border-collapse: collapse;
+}
+
+table th,
+table tr,
+table td,
+table,
+form table tr {
+    border: 0px solid #f0f0f0; /* Set border color and width */
+    border-collapse: collapse;
+}
+
+.page th,
+.page td,
+.page tr,
+#ms_brief_table tr,
+#ms_brief_table td,
+.contact_pot_revs_table tr,
+.folder_table tr,
+.folder_table td,
+.refRec tr,
+.refRec td,
+.refRec th
+{
+    border: 1px solid #e0dfda;
+    border-collapse: collapse;
+}
+
+.navbg *,
+.navdk *,
+.nathumbehavbg *
+{
+  border: none;
+}
+
+
+span.BODY {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 2px;
+}
+
+BODY {
+    color: #000000;
+}
+
+.BODY {
+    color: #000000;
+}
+A {
+    color: #007899;
+}
+A:visited {
+    color: #007899;
+}
+A:hover {
+    color: #ff3300;
+}
+A.nav {
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+A.nav:visited {
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+A.nav:hover {
+    font-weight: bold;
+    color: #333333;
+    text-decoration: none;
+}
+.navOff {
+    font-weight: bold;
+    color: #666666;
+    text-decoration: none;
+}
+
+TR.nathumbehavbg {
+    background-color: #1251a0;
+}
+
+TD.navlt,
+TR.navlt,
+TD.navdk,
+TR.navdk,
+TD.navbg,
+TR.navbg {
+    background-color: #63b1c7;
+}
+TD.footer {
+    font-weight: normal;
+    color: #999999;
+    text-decoration: none;
+}
+A.footer {
+    font-weight: bold;
+    color: #999999;
+    text-decoration: none;
+}
+A.footer:visited {
+    font-weight: bold;
+    color: #999999;
+    text-decoration: none;
+}
+A.footer:hover {
+    font-weight: bold;
+    color: #333333;
+    text-decoration: none;
+}
+.openacctbg {
+    background-color: #ffcc33;
+}
+.TEXT {
+    color: #000000;
+}
+.TTS {
+    font-weight: bold;
+    color: #666666;
+}
+.TTS2 {
+}
+.TES {
+    color: #ff0000;
+}
+.TRS {
+}
+.SMALL1 {
+}
+.SMALL2 {
+}
+.SMALL3 {
+}
+.GUTTER1 {
+    color: #ffcc66;
+}
+.REDN {
+    font-weight: normal;
+    color: #ff3300;
+}
+.JLBBL {
+    color: #f7efce;
+    background-color: #530d21;
+}
+.JLB1 {
+    color: #530d21;
+    background-color: #f7efce;
+}
+.MBC2 {
+    color: #ffffff;
+    background-color: #004080;
+}
+.WH {
+    color: #530d21;
+}
+.GUTTER2 {
+    color: #ffffff;
+}
+.GUTTER3 {
+    color: #ccccff;
+}
+A.BAR {
+    color: #ffffff;
+    text-decoration: none;
+}
+A.HELPBAR {
+    color: #000000;
+    text-decoration: none;
+}
+A.GUTTER1 {
+    font-weight: normal;
+    color: #ffcc66;
+    line-height: normal;
+    font-style: normal;
+    font-variant: normal;
+    text-decoration: none;
+}
+A.GUTTER2 {
+    color: #ffffff;
+    text-decoration: none;
+}
+A.SP {
+    text-decoration: none;
+}
+A.ND {
+    text-decoration: none;
+}
+A.H1 {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+A.H6 {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+H1 {
+    font-weight: bold;
+}
+.H1 {
+    font-weight: bold;
+}
+H2 {
+    font-weight: bold;
+}
+.H2 {
+    font-weight: bold;
+}
+H3 {
+    font-weight: bold;
+}
+.H3 {
+    font-weight: bold;
+}
+H4 {
+    font-weight: bold;
+}
+.H4 {
+    font-weight: bold;
+}
+H5 {
+    font-weight: bold;
+}
+.H5 {
+    font-weight: bold;
+}
+H6 {
+    font-weight: bold;
+}
+.H6 {
+    font-weight: bold;
+}
+
+.MSG {
+    color: #ff3300;
+}
+
+.TITLE {
+    font-weight: bold;
+}
+
+.SMALLHEAD {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.SMALLTD {
+}
+
+.APTOP {
+    color: #000000;
+    background-color: #999999;
+}
+
+.APLIST {
+    background-color: #eaeaea;
+}
