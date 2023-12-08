@@ -563,108 +563,10 @@ function insertButton_letter() {
 
 insertButton_letter();
 
-// DONE RTA's
 
 //REF FINDER INTEGRATION
 
-function RefFinder() {
-    //var titleHeader = Array.from(document.querySelectorAll("th")).find(cell => cell.textContent.includes("Title"));
-    var titleHeader = Array.from(document.querySelectorAll("th")).find(
-        (cell) => cell.textContent.trim() === "Title"
-    );
 
-    if (titleHeader) {
-        var titleCell = titleHeader.nextElementSibling;
-        var MStitle = titleCell.textContent.trim();
-    }
-
-    //var abstractHeader = Array.from(document.querySelectorAll("th")).find(cell => cell.textContent.includes("Abstract"));
-    var abstractHeader = Array.from(document.querySelectorAll("th")).find(
-        (cell) => cell.textContent.trim() === "Abstract"
-    );
-
-    if (abstractHeader) {
-        var abstractCell = abstractHeader.nextElementSibling;
-        var MSabstract = abstractCell.textContent.trim();
-    }
-
-    var correspondingHeader = Array.from(document.querySelectorAll("th")).find(
-        function (th) {
-            return th.textContent === "Corresponding Author";
-        }
-    );
-    var contributingHeader = Array.from(document.querySelectorAll("th")).find(
-        (cell) => cell.textContent.includes("Contributing Author")
-    );
-
-    var names = [];
-    if (correspondingHeader !== undefined) {
-        var correspondingCell = correspondingHeader.nextElementSibling;
-        var cellText = correspondingCell.textContent;
-        cellText = cellText.replace(/\(([^)]+)\)/g, ""); // Remove anything in parentheses
-        cellText = cellText.replace(/Dr\.?|Professor|Mr\.?|Ms\.?/gi, ""); // Remove titles
-        names.push(cellText.trim());
-    }
-
-    if (contributingHeader !== undefined) {
-        var contributingCell = contributingHeader.nextElementSibling;
-        var cellText = contributingCell.textContent;
-        cellText = cellText.replace(/\(([^)]+)\)/g, ""); // Remove anything in parentheses
-        cellText = cellText.replace(/Dr\.?|Professor|Mr\.?|Ms\.?/gi, ""); // Remove titles
-        var contributingNames = cellText.trim().split(/\s*,\s*/);
-        names.push(...contributingNames);
-    }
-
-    // Create a button element
-    const button = document.createElement("input");
-    button.type = "button";
-    button.value = "Reviewer Finder";
-    button.classList.add("Triage");
-
-    // Add a click event listener to the button
-    button.addEventListener("click", () => {
-        // Send a message to the background page to open a new tab
-        chrome.runtime.sendMessage({
-            action: "open_tab",
-            title: MStitle,
-            abstract: MSabstract,
-            authors: names
-        });
-    });
-
-    var briefTable = document.getElementById("ms_brief_table");
-    if (briefTable) {
-        briefTable.parentNode.insertBefore(button, briefTable.nextSibling);
-        var newLine = document.createElement("br");
-        //briefTable.parentNode.insertBefore(newLine, briefTable.nextSibling);
-    } else {
-        console.log("Couldn't find the ms_brief_table table.");
-    }
-
-    // Add a message listener to handle messages from the background page
-    chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-        if (message.action === "insert_text") {
-            var textarea = document.getElementById("paper_title");
-            if (textarea) {
-                textarea.value = message.title;
-            } else {
-                console.error('Textarea with id "paper_title" not found.');
-            }
-            textarea = document.getElementById("paper_abstract");
-            if (textarea) {
-                textarea.value = message.abstract;
-            } else {
-                console.error('Textarea with id "paper_abstract" not found.');
-            }
-            textarea = document.getElementById("paper_authors");
-            if (textarea) {
-                textarea.value = message.authors;
-            } else {
-                console.error('Textarea with id "paper_authors" not found.');
-            }
-        }
-    });
-}
 
 RefFinder();
 

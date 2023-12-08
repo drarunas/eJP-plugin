@@ -16,7 +16,9 @@
             "js": [
                 "jquery.js",
                 "jquery.dataTables.js",
+                "RefFinderInt.js",
                 "content.js"
+ 
             ],
             "css": [
                 "custom.css",
@@ -26,7 +28,8 @@
                 "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap",
                 "https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap",
                 "https://fonts.googleapis.com/css?family=Lora&display=swap"
-            ]
+            ],
+            "module": true
         }
     ],
     "permissions": [
